@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pull coton biologique — Marque Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">MARQUE<span>DEMO</span></a>
+      <nav class="nav-links">
+        <a href="#">Femme</a>
+        <a href="#">Homme</a>
+        <a href="#">Enfant</a>
+        <a href="#">Notre démarche</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Recherche">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Panier">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div class="container breadcrumb">
+      <a href="#">Accueil</a>
+      <span>/</span>
+      <a href="#">Femme</a>
+      <span>/</span>
+      <a href="#">Pulls &amp; Sweatshirts</a>
+      <span>/</span>
+      <span>Pull col rond en coton biologique</span>
+    </div>
+
+    <!-- PRODUCT SECTION -->
+    <section class="product-section container">
+
+      <!-- GALLERY -->
+      <div class="product-gallery">
+        <div class="gallery-main">
+          <img
+            src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80"
+            alt="Pull col rond en coton biologique — vue principale"
+            class="main-img"
+          />
+        </div>
+        <div class="gallery-thumbs">
+          <button class="thumb active">
+            <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=200&q=70" alt="Vue 1" />
+          </button>
+          <button class="thumb">
+            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=200&q=70" alt="Vue 2" />
+          </button>
+          <button class="thumb">
+            <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=200&q=70" alt="Vue 3" />
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div class="product-info">
+        <div class="product-category">Pulls &amp; Sweatshirts</div>
+        <h1 class="product-title">Pull col rond<br/>en coton biologique</h1>
+
+        <div class="product-rating">
+          <div class="stars" aria-label="4,5 étoiles sur 5">
+            ★★★★<span class="half">★</span>
+          </div>
+          <span class="rating-count">128 avis</span>
+        </div>
+
+        <div class="product-price">
+          <span class="price-current">59,90 €</span>
+          <span class="price-old">79,90 €</span>
+          <span class="price-badge">−25 %</span>
+        </div>
+
+        <p class="product-desc">
+          Douceur naturelle et coupe intemporelle. Ce pull est confectionné en coton biologique certifié GOTS, issu d'une agriculture sans pesticides. Idéal pour toutes les saisons, il se porte aussi bien seul que superposé.
+        </p>
+
+        <!-- COLOR SELECTOR -->
+        <div class="selector-group">
+          <label class="selector-label">Couleur — <strong>Écru naturel</strong></label>
+          <div class="color-swatches">
+            <button class="swatch active" style="background:#f5f0e8;" aria-label="Écru naturel" title="Écru naturel"></button>
+            <button class="swatch" style="background:#2c2c2c;" aria-label="Noir" title="Noir"></button>
+            <button class="swatch" style="background:#7a9a8e;" aria-label="Sauge" title="Sauge"></button>
+            <button class="swatch" style="background:#b5846c;" aria-label="Terre cuite" title="Terre cuite"></button>
+          </div>
+        </div>
+
+        <!-- SIZE SELECTOR -->
+        <div class="selector-group">
+          <div class="size-header">
+            <label class="selector-label">Taille</label>
+            <a href="#" class="size-guide">Guide des tailles</a>
+          </div>
+          <div class="size-grid">
+            <button class="size-btn">XS</button>
+            <button class="size-btn active">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="product-actions">
+          <button class="btn-primary">Ajouter au panier</button>
+          <button class="btn-wishlist" aria-label="Ajouter aux favoris">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+
+        <!-- QUICK TRUST BADGES -->
+        <div class="trust-badges">
+          <div class="badge">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Livraison offerte dès 80 €
+          </div>
+          <div class="badge">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Retours gratuits 30 jours
+          </div>
+          <div class="badge">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Paiement sécurisé
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TABS NAV -->
+    <div class="tabs-nav-wrapper">
+      <div class="container">
+        <nav class="tabs-nav" role="tablist">
+          <button class="tab-btn active" role="tab" data-tab="description">Description</button>
+          <button class="tab-btn" role="tab" data-tab="composition">Composition &amp; entretien</button>
+          <button class="tab-btn active-env" role="tab" data-tab="env">Qualités &amp; Caractéristiques Environnementales</button>
+          <button class="tab-btn" role="tab" data-tab="avis">Avis clients (128)</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- TAB CONTENTS -->
+    <div class="container tab-contents">
+
+      <!-- DESCRIPTION -->
+      <div class="tab-panel active" id="tab-description">
+        <div class="tab-inner">
+          <h2>À propos de ce pull</h2>
+          <p>Conçu pour durer, ce pull col rond incarne notre engagement pour une mode plus responsable. Sa matière — un coton biologique certifié GOTS — garantit une culture sans pesticides de synthèse et une chaîne de production respectueuse des personnes et de l'environnement.</p>
+          <p>Sa coupe légèrement relâchée s'adapte à toutes les morphologies. Côtes en bas de manche et en bas de corps pour un maintien impeccable.</p>
+          <ul class="feature-list">
+            <li>Coton biologique certifié GOTS</li>
+            <li>Tricoté dans un atelier familial au Portugal</li>
+            <li>Colorants naturels et OEKO-TEX® Standard 100</li>
+            <li>Coupe unisexe — taille en conséquence</li>
+            <li>Épaisseur 280 g/m² — idéal mi-saison à hiver</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- COMPOSITION -->
+      <div class="tab-panel" id="tab-composition">
+        <div class="tab-inner">
+          <h2>Composition &amp; entretien</h2>
+          <div class="composition-grid">
+            <div>
+              <h3>Composition</h3>
+              <ul class="feature-list">
+                <li>100 % coton biologique (certifié GOTS)</li>
+                <li>Fils non traités, colorants à l'eau</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Entretien recommandé</h3>
+              <ul class="feature-list">
+                <li>Lavage en machine à 30 °C, cycle délicat</li>
+                <li>Ne pas essorer</li>
+                <li>Séchage à plat à l'ombre</li>
+                <li>Repassage vapeur à basse température</li>
+                <li>Ne pas mettre au sèche-linge</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QCE — ENVIRONNEMENT -->
+      <div class="tab-panel active" id="tab-env">
+        <div class="tab-inner env-section">
+
+          <div class="env-header">
+            <div class="env-title-block">
+              <span class="env-tag">QCE</span>
+              <h2>Qualités &amp; Caractéristiques Environnementales</h2>
+              <p class="env-intro">Cette section regroupe les informations environnementales clés de ce produit : comment le donner une seconde vie, le faire réparer, ou encore le recycler en fin de vie.</p>
+            </div>
+          </div>
+
+          <div class="env-grid">
+
+            <!-- RECYCLABILITÉ -->
+            <div class="env-card">
+              <div class="env-card-icon">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
+                  <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/>
+                  <path d="m14 16 3-3-3-3"/>
+                  <path d="M8.293 13.596 7.196 9.5 3.1 10.598"/>
+                  <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/>
+                  <path d="m13.378 9.633 3.96-.225.225-3.96"/>
+                </svg>
+              </div>
+              <div class="env-card-content">
+                <h3>Recyclabilité</h3>
+                <p>Ce pull est conçu pour être recyclé en fin de vie. Sa composition mono-matière (100 % coton) facilite le tri et le traitement par les filières de recyclage textile.</p>
+                <p>En France, la filière REP TLC (Textiles, Linge de maison, Chaussures) permet de déposer vos vêtements usagés dans les bornes de collecte dédiées, même abîmés ou non lavés. Ces textiles sont ensuite triés, réemployés ou valorisés matière.</p>
+                <div class="env-stat">
+                  <strong>1 kg</strong> de textile recyclé = jusqu'à <strong>3,6 kg de CO₂</strong> évité
+                </div>
+              </div>
+            </div>
+
+            <!-- RÉPARABILITÉ -->
+            <div class="env-card">
+              <div class="env-card-icon">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div class="env-card-content">
+                <h3>Réparabilité</h3>
+                <p>Nous concevons nos pièces pour qu'elles durent. Ce pull est réparable : son tricot uni et sa construction simple permettent de repriser les trous, raccommoder les coutures ou remplacer les côtes abîmées.</p>
+                <p>Nous proposons un service de reprise et réparation gratuit dans nos boutiques. Un guide de réparation illustré est également disponible sur notre site pour les petits travaux du quotidien.</p>
+                <div class="env-stat">
+                  Doubler la durée de vie d'un vêtement réduit son impact carbone de <strong>jusqu'à 44 %</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- RÉEMPLOI -->
+            <div class="env-card">
+              <div class="env-card-icon">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+              </div>
+              <div class="env-card-content">
+                <h3>Possibilité de réemploi</h3>
+                <p>Ce pull peut facilement trouver une seconde vie. Sa matière naturelle et sa coupe classique lui confèrent une longévité esthétique qui dépasse les tendances.</p>
+                <p>Vous pouvez le donner à une association, le revendre sur une plateforme de seconde main ou le déposer dans une borne de collecte textile. Nous proposons également un programme de reprise en boutique : rapportez votre pièce usagée et bénéficiez d'un bon d'achat de 5 €.</p>
+                <div class="env-stat">
+                  Acheter ou donner une pièce de seconde main, c'est <strong>éviter jusqu'à 80 %</strong> des émissions d'un article neuf
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end env-grid -->
+
+          <!-- INFO-TRI BLOCK -->
+          <div class="infotri-block">
+            <div class="infotri-header">
+              <div>
+                <h3>Info-Tri</h3>
+                <p>Retrouvez les consignes officielles de tri et de fin de vie pour ce produit, générées par le configurateur Info-Tri de l'ADEME.</p>
+              </div>
+              <a href="https://quefairedemesdechets.ademe.fr/infotri/" target="_blank" rel="noopener" class="infotri-link">
+                En savoir plus sur le programme
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+            <div class="infotri-widget">
+              <script src="https://quefairedemesdechets.ademe.fr/infotri/iframe.js" data-config="categorie=textile&consigne=3&avec_phrase=true"></script>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- AVIS -->
+      <div class="tab-panel" id="tab-avis">
+        <div class="tab-inner">
+          <h2>Avis clients</h2>
+          <div class="reviews-summary">
+            <div class="reviews-score">
+              <span class="score-big">4,5</span>
+              <div class="stars">★★★★<span class="half">★</span></div>
+              <span>128 avis vérifiés</span>
+            </div>
+          </div>
+          <div class="reviews-list">
+            <div class="review-item">
+              <div class="review-header">
+                <strong>Sophie M.</strong>
+                <div class="stars small">★★★★★</div>
+                <span class="review-date">il y a 3 jours</span>
+              </div>
+              <p>Très belle matière, vraiment douce au toucher. La coupe est parfaite, ni trop large ni trop ajustée. Je suis ravie de mon achat !</p>
+            </div>
+            <div class="review-item">
+              <div class="review-header">
+                <strong>Thomas R.</strong>
+                <div class="stars small">★★★★☆</div>
+                <span class="review-date">il y a 1 semaine</span>
+              </div>
+              <p>Très bon pull, qualité au rendez-vous. Légèrement plus grand que ma taille habituelle, pensez à prendre une taille en dessous si vous préférez une coupe ajustée.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end tab-contents -->
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">MARQUE<span>DEMO</span></a>
+        <p>Mode responsable, fabriquée pour durer.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <strong>Aide</strong>
+          <a href="#">Livraison &amp; retours</a>
+          <a href="#">Guide des tailles</a>
+          <a href="#">Contact</a>
+        </div>
+        <div>
+          <strong>Engagements</strong>
+          <a href="#">Notre démarche</a>
+          <a href="#">Certifications</a>
+          <a href="#">Info-Tri ADEME</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2025 MarqueDemo — Page de démonstration</span>
+        <span>Propulsé par le configurateur <a href="https://quefairedemesdechets.ademe.fr/infotri/" target="_blank" rel="noopener">Info-Tri ADEME</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
