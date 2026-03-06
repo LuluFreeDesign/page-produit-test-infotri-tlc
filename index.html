@@ -143,45 +143,44 @@
         </div>
 
         <!-- QCE BLOCK -->
-        <div class="qce-block">
-          <div class="qce-header">
+        <details class="qce-block">
+          <summary class="qce-header">
             <svg class="qce-leaf" width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#52b788" d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2 2-2 3.5-4 5-5-6 0-11 4-12.5 9.5C5 12 5 13 5 13l-1 4.5A13 13 0 0 1 17 8Z"/></svg>
-            <div>
-              <div class="qce-main-title">Ce produit aura plusieurs vies !</div>
-              <div class="qce-subtitle">Qualités &amp; Caractéristiques Environnementales</div>
-            </div>
-          </div>
+            <div class="qce-main-title">Qualités &amp; Caractéristiques environnementales</div>
+            <svg class="qce-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
 
-          <div class="qce-items">
-            <div class="qce-item">
-              <span class="qce-emoji">🔧</span>
-              <div>
-                <strong>Réparable</strong>
-                <span>— Simple à repriser ou retoucher et éligible au Bonus réparation !</span>
+          <div class="qce-body">
+            <div class="qce-items">
+              <div class="qce-item">
+                <span class="qce-emoji">🔧</span>
+                <div>
+                  <strong>Réparable</strong>
+                  <span>— Simple à repriser ou retoucher et éligible au Bonus Réparation !</span>
+                </div>
+              </div>
+              <div class="qce-item">
+                <span class="qce-emoji">🔁</span>
+                <div>
+                  <strong>Réemployable</strong>
+                  <span>— Donnez-le ou revendez-le, et faites des heureux !</span>
+                </div>
+              </div>
+              <div class="qce-item">
+                <span class="qce-emoji">♻️</span>
+                <div>
+                  <strong>Recyclable</strong>
+                  <span>— Déposez-le dans un conteneur, un magasin ou une association !</span>
+                </div>
               </div>
             </div>
-            <div class="qce-item">
-              <span class="qce-emoji">🔁</span>
-              <div>
-                <strong>Réemployable</strong>
-                <span>— Donnez-le ou revendez-le, et faites des heureux !</span>
-              </div>
-            </div>
-            <div class="qce-item">
-              <span class="qce-emoji">♻️</span>
-              <div>
-                <strong>Recyclable</strong>
-                <span>— Déposez-le dans un conteneur, un magasin ou une association</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="qce-infotri">
-            <div class="infotri-widget-wrap">
-              <script src="https://quefairedemesdechets.ademe.fr/infotri/iframe.js" data-config="categorie=textile&consigne=3&avec_phrase=true"></script>
+            <div class="qce-infotri">
+              <p class="infotri-label">Pour trouver un lieu près de chez vous :</p>
+              <div class="infotri-widget-wrap" id="infotri-wrap"></div>
             </div>
           </div>
-        </div>
+        </details>
 
       </div><!-- end product-info -->
 

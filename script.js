@@ -56,6 +56,19 @@ sizeBtns.forEach(s => {
   });
 });
 
-// On load: show env tab by default so info-tri is visible
-// (optional — comment out if you prefer Description tab)
-// document.querySelector('[data-tab="env"]').click();
+// Chargement du widget Info-Tri au premier clic sur l'accordéon QCE
+const qceBlock = document.querySelector('.qce-block');
+const infotriWrap = document.getElementById('infotri-wrap');
+
+if (qceBlock && infotriWrap) {
+  qceBlock.addEventListener('toggle', function handler() {
+    if (this.open) {
+      const script = document.createElement('script');
+      script.src = 'https://quefairedemesdechets.ademe.fr/infotri/iframe.js';
+      script.dataset.config = 'categorie=textile&consigne=3&avec_phrase=false';
+      infotriWrap.appendChild(script);
+      // Ne charger qu'une seule fois
+      qceBlock.removeEventListener('toggle', handler);
+    }
+  });
+}
