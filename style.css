@@ -522,39 +522,52 @@ ul {
 }
 
 /* =====================
-   QCE BLOCK (dans colonne produit)
+   QCE BLOCK — ACCORDÉON
    ===================== */
 .qce-block {
   border-top: 1px solid var(--gray-light);
   padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 }
 
+/* summary = en-tête cliquable */
 .qce-header {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  padding: 2px 0;
 }
+.qce-header::-webkit-details-marker { display: none; }
 
 .qce-leaf {
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .qce-main-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--black);
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-mid);
   line-height: 1.3;
 }
 
-.qce-subtitle {
-  font-size: 11px;
+.qce-chevron {
   color: var(--gray-mid);
-  font-weight: 400;
-  margin-top: 2px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.qce-block[open] .qce-chevron {
+  transform: rotate(180deg);
+}
+
+/* contenu de l'accordéon */
+.qce-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 14px;
 }
 
 .qce-items {
@@ -589,18 +602,29 @@ ul {
 .qce-infotri {
   background: var(--gray-bg);
   border-radius: var(--radius);
-  padding: 14px 16px;
+  padding: 14px;           /* padding égal sur les 4 côtés */
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 540px;            /* largeur fixe, plus étroite que la colonne (~616px) */
+  overflow: hidden;
 }
 
+.infotri-label {
+  font-size: 12px;
+  color: var(--gray-mid);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Le wrapper s'étend à (100% / scale) avant scale,
+   ce qui donne exactement la largeur du contenu après scale.
+   margin-bottom négatif pour compenser l'espace de layout non-scalé. */
 .infotri-widget-wrap {
-  transform: scale(0.6);
+  transform: scale(0.7);
   transform-origin: top left;
-  width: calc(100% / 0.6);
-  height: 120px;
-  overflow: hidden;
+  width: calc(100% / 0.7);
+  margin-bottom: -42px;
 }
 
 .qce-link {
