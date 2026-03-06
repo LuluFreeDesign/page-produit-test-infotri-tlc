@@ -547,9 +547,9 @@ ul {
 
 .qce-main-title {
   flex: 1;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--gray-mid);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
   line-height: 1.3;
 }
 
@@ -611,7 +611,7 @@ ul {
 }
 
 .infotri-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--gray-mid);
   font-weight: 500;
   margin: 0;
