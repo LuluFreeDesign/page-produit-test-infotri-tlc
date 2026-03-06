@@ -50,3 +50,14 @@ npx serve .
 # Ou simplement ouvrir index.html dans le navigateur
 open index.html
 ```
+
+## ⚠️ RÈGLE IMPORTANTE
+
+**Ne JAMAIS commit, push ou merge sans l'approbation explicite de l'utilisateur.**
+
+Avant toute action de versioning :
+1. Proposer les changements et attendre confirmation
+2. Montrer un aperçu du code si pertinent
+3. Obtenir un "oui" explicite avant git commit/push
+
+Cette règle est stricte et non négociable.
