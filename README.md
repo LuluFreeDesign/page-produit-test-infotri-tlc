@@ -34,24 +34,38 @@ Pour configurer votre propre widget, rendez-vous sur le [configurateur Info-Tri]
 
 ## Intégrer la démo sur votre site
 
-Vous pouvez intégrer cette démo complète sur n'importe quel site avec un simple script iframe.
+Intégration ultra-simple : **une seule ligne de code**.
 
 ### Usage
 
 ```html
-<div data-qfdm-embed data-qfdm-width="100%" data-qfdm-height="1200px"></div>
-<script src="https://lulufreedesign.github.io/page-produit-test-infotri-tlc/embed.js"></script>
+<script src="https://lulufreedesign.github.io/page-produit-test-infotri-tlc/embed.js"
+        data-width="100%" data-height="1200px"></script>
 ```
 
 ### Options
 
-- `data-qfdm-width` : largeur de l'iframe (défaut: `100%`)
-- `data-qfdm-height` : hauteur de l'iframe (défaut: `1200px`)
+- `data-width` : largeur du conteneur (défaut: `100%`)
+- `data-height` : hauteur de l'iframe (défaut: `1200px`)
+
+**Exemples** :
+
+```html
+<!-- Pleine largeur -->
+<script src="..." data-width="100%"></script>
+
+<!-- Largeur fixe -->
+<script src="..." data-width="600px" data-height="900px"></script>
+
+<!-- Défauts (identique à aucun attribut) -->
+<script src="..."></script>
+```
 
 ### Avantages
 
+✅ **Une seule ligne** — le script se positionne lui-même
 ✅ Toujours à jour — pointe vers la dernière version GitHub Pages
-✅ Zéro dépendance — un simple script auto-contenu
+✅ Zéro dépendance — script auto-contenu
 ✅ Responsive — s'adapte à votre mise en page
 ✅ Pas de configuration — suffit de copier/coller
 
