@@ -56,19 +56,32 @@ sizeBtns.forEach(s => {
   });
 });
 
-// Chargement du widget Info-Tri au premier clic sur l'accordéon QCE
+// Chargement du widget Info-Tri une seule fois
 const qceBlock = document.querySelector('.qce-block');
 const infotriWrap = document.getElementById('infotri-wrap');
 
 if (qceBlock && infotriWrap) {
-  qceBlock.addEventListener('toggle', function handler() {
+  let widgetLoaded = false;
+
+  const loadWidget = () => {
+    if (widgetLoaded) return; // Ne charger qu'une seule fois
+    widgetLoaded = true;
+
+    const script = document.createElement('script');
+    script.src = 'https://quefairedemesdechets.ademe.fr/infotri/iframe.js';
+    script.dataset.config = 'categorie=textile&consigne=3&avec_phrase=false';
+    infotriWrap.appendChild(script);
+  };
+
+  // Charger si déjà ouvert au chargement
+  if (qceBlock.open) {
+    loadWidget();
+  }
+
+  // Charger si ouvert après
+  qceBlock.addEventListener('toggle', function() {
     if (this.open) {
-      const script = document.createElement('script');
-      script.src = 'https://quefairedemesdechets.ademe.fr/infotri/iframe.js';
-      script.dataset.config = 'categorie=textile&consigne=3&avec_phrase=false';
-      infotriWrap.appendChild(script);
-      // Ne charger qu'une seule fois
-      qceBlock.removeEventListener('toggle', handler);
+      loadWidget();
     }
   });
 }
