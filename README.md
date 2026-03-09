@@ -32,6 +32,29 @@ Le widget s'intègre avec une seule ligne de code :
 
 Pour configurer votre propre widget, rendez-vous sur le [configurateur Info-Tri](https://quefairedemesdechets.ademe.fr/infotri/).
 
+## Intégrer la démo sur votre site
+
+Vous pouvez intégrer cette démo complète sur n'importe quel site avec un simple script iframe.
+
+### Usage
+
+```html
+<div data-qfdm-embed data-qfdm-width="100%" data-qfdm-height="1200px"></div>
+<script src="https://lulufreedesign.github.io/page-produit-test-infotri-tlc/embed.js"></script>
+```
+
+### Options
+
+- `data-qfdm-width` : largeur de l'iframe (défaut: `100%`)
+- `data-qfdm-height` : hauteur de l'iframe (défaut: `1200px`)
+
+### Avantages
+
+✅ Toujours à jour — pointe vers la dernière version GitHub Pages
+✅ Zéro dépendance — un simple script auto-contenu
+✅ Responsive — s'adapte à votre mise en page
+✅ Pas de configuration — suffit de copier/coller
+
 ## Stack technique
 
 HTML / CSS / JS vanilla — aucune dépendance, aucun build nécessaire.
