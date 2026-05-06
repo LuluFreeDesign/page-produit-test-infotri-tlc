@@ -32,6 +32,11 @@
     </div>
   </header>
 
+  <!-- PROTOTYPE BANNER -->
+  <div class="prototype-banner">
+    Ceci est un prototype d'une fiche produit. Les informations présentées sont purement fictives.
+  </div>
+
   <main>
 
     <!-- BREADCRUMB -->
@@ -52,20 +57,20 @@
       <div class="product-gallery">
         <div class="gallery-main">
           <img
-            src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80"
+            src="img-1.avif"
             alt="T-shirt en coton — vue principale"
             class="main-img"
           />
         </div>
         <div class="gallery-thumbs">
           <button class="thumb active">
-            <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=200&q=70" alt="Vue 1" />
+            <img src="img-1.avif" alt="Vue 1" />
           </button>
           <button class="thumb">
-            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=200&q=70" alt="Vue 2" />
+            <img src="img-2.avif" alt="Vue 2" />
           </button>
           <button class="thumb">
-            <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=200&q=70" alt="Vue 3" />
+            <img src="img-3.avif" alt="Vue 3" />
           </button>
         </div>
       </div>
@@ -142,102 +147,98 @@
           </div>
         </div>
 
-        <!-- INFOTRI -->
-        <div class="qce-infotri">
-          <p class="infotri-label">Pour trouver un lieu près de chez vous :</p>
-          <div class="infotri-widget-wrap" id="infotri-wrap"></div>
-        </div>
-
       </div><!-- end product-info -->
 
     </section>
 
-    <!-- TABS NAV -->
-    <div class="tabs-nav-wrapper">
-      <div class="container">
-        <nav class="tabs-nav" role="tablist">
-          <button class="tab-btn active" role="tab" data-tab="description">Description</button>
-          <button class="tab-btn" role="tab" data-tab="composition">Composition &amp; entretien</button>
-          <button class="tab-btn" role="tab" data-tab="avis">Avis clients (128)</button>
-        </nav>
-      </div>
-    </div>
+    <!-- PRODUCT DETAILS -->
+    <div class="container product-details">
 
-    <!-- TAB CONTENTS -->
-    <div class="container tab-contents">
-
-      <!-- DESCRIPTION -->
-      <div class="tab-panel active" id="tab-description">
-        <div class="tab-inner">
-          <h2>À propos de ce t-shirt</h2>
-          <p>T-shirt basique et incontournable. Coupe classique, coton doux et respirant. Parfait pour un usage quotidien, en toutes saisons.</p>
-          <ul class="feature-list">
-            <li>100 % coton</li>
-            <li>Coupe regular unisexe</li>
-            <li>Coloris disponibles : Blanc, Noir, Gris, Marine</li>
-            <li>Poids : 170 g/m²</li>
-            <li>Facile à entretenir</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- COMPOSITION -->
-      <div class="tab-panel" id="tab-composition">
-        <div class="tab-inner">
-          <h2>Composition &amp; entretien</h2>
-          <div class="composition-grid">
-            <div>
-              <h3>Composition</h3>
-              <ul class="feature-list">
-                <li>100 % coton</li>
-                <li>Colorants standard</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Entretien</h3>
-              <ul class="feature-list">
-                <li>Lavage en machine à 30-40 °C</li>
-                <li>Séchage en tumbleuse possible</li>
-                <li>Repassage normal</li>
-              </ul>
-            </div>
+      <!-- DESCRIPTION + COMPOSITION -->
+      <section class="details-section details-section--compact">
+        <h2>À propos &amp; composition</h2>
+        <div class="compact-grid">
+          <div class="compact-col">
+            <h3>Le produit</h3>
+            <ul class="feature-list">
+              <li>100 % coton, 170 g/m²</li>
+              <li>Coupe regular unisexe</li>
+              <li>Blanc, Noir, Gris, Marine</li>
+            </ul>
+          </div>
+          <div class="compact-col">
+            <h3>Composition</h3>
+            <ul class="feature-list">
+              <li>100 % coton</li>
+              <li>Colorants standard</li>
+            </ul>
+          </div>
+          <div class="compact-col">
+            <h3>Entretien</h3>
+            <ul class="feature-list">
+              <li>Lavage à 30–40 °C</li>
+              <li>Séchage en tumbleuse OK</li>
+              <li>Repassage normal</li>
+            </ul>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- QUALITÉ & ENVIRONNEMENT -->
+      <section class="details-section">
+        <h2>Qualité &amp; environnement</h2>
+
+        <!-- ÉCOBALYSE -->
+        <div class="env-row">
+          <div class="env-row__text">
+            <p class="env-row__title">Coût environnemental</p>
+            <p class="env-row__desc">Cet indicateur mesure l'impact environnemental de ce produit tout au long de son cycle de vie (fabrication, transport, utilisation, fin de vie). Il est calculé selon la méthodologie publique développée par le projet <a href="https://ecobalyse.beta.gouv.fr" target="_blank" rel="noopener" class="env-link">Écobalyse</a>.</p>
+          </div>
+          <img src="etiquette-ecobalyse.svg" alt="Étiquette Écobalyse — 1422 points d'impact, 837 pts/100g" class="ecobalyse-label" />
+        </div>
+
+        <div class="env-row">
+          <div class="env-row__text">
+            <p class="env-row__title">Fin de vie</p>
+            <p class="env-row__desc">Ce produit est conçu pour durer. En fin de vie, ne le jetez pas — donnez-lui une seconde chance ou déposez-le dans un point de collecte textile près de chez vous.</p>
+          </div>
+          <div class="infotri-clip">
+            <div class="infotri-widget-wrap" id="infotri-wrap"></div>
+          </div>
+        </div>
+      </section>
 
       <!-- AVIS -->
-      <div class="tab-panel" id="tab-avis">
-        <div class="tab-inner">
-          <h2>Avis clients</h2>
-          <div class="reviews-summary">
-            <div class="reviews-score">
-              <span class="score-big">4,5</span>
-              <div class="stars">★★★★<span class="half">★</span></div>
-              <span>128 avis vérifiés</span>
-            </div>
-          </div>
-          <div class="reviews-list">
-            <div class="review-item">
-              <div class="review-header">
-                <strong>Sophie M.</strong>
-                <div class="stars small">★★★★★</div>
-                <span class="review-date">il y a 3 jours</span>
-              </div>
-              <p>Très belle matière, vraiment douce au toucher. La coupe est parfaite, ni trop large ni trop ajustée. Je suis ravie de mon achat !</p>
-            </div>
-            <div class="review-item">
-              <div class="review-header">
-                <strong>Thomas R.</strong>
-                <div class="stars small">★★★★☆</div>
-                <span class="review-date">il y a 1 semaine</span>
-              </div>
-              <p>Très bon pull, qualité au rendez-vous. Légèrement plus grand que ma taille habituelle, pensez à prendre une taille en dessous si vous préférez une coupe ajustée.</p>
-            </div>
+      <section class="details-section">
+        <h2>Avis clients</h2>
+        <div class="reviews-summary">
+          <div class="reviews-score">
+            <span class="score-big">4,5</span>
+            <div class="stars">★★★★<span class="half">★</span></div>
+            <span>128 avis vérifiés</span>
           </div>
         </div>
-      </div>
+        <div class="reviews-list">
+          <div class="review-item">
+            <div class="review-header">
+              <strong>Sophie M.</strong>
+              <div class="stars small">★★★★★</div>
+              <span class="review-date">il y a 3 jours</span>
+            </div>
+            <p>Très belle matière, vraiment douce au toucher. La coupe est parfaite, ni trop large ni trop ajustée. Je suis ravie de mon achat !</p>
+          </div>
+          <div class="review-item">
+            <div class="review-header">
+              <strong>Thomas R.</strong>
+              <div class="stars small">★★★★☆</div>
+              <span class="review-date">il y a 1 semaine</span>
+            </div>
+            <p>Très bon pull, qualité au rendez-vous. Légèrement plus grand que ma taille habituelle, pensez à prendre une taille en dessous si vous préférez une coupe ajustée.</p>
+          </div>
+        </div>
+      </section>
 
-    </div><!-- end tab-contents -->
+    </div><!-- end product-details -->
 
   </main>
 

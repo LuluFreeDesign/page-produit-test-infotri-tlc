@@ -118,6 +118,17 @@ ul {
   display: flex;
   gap: 8px;
 }
+/* PROTOTYPE BANNER */
+.prototype-banner {
+  background: #f5f0e8;
+  border-bottom: 1px solid #e8e0d0;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #8a7e6e;
+  letter-spacing: 0.02em;
+}
+
 .icon-btn {
   display: flex;
   align-items: center;
@@ -224,9 +235,10 @@ ul {
 .product-info > .product-rating,
 .product-info > .product-price,
 .product-info > .product-desc,
+.product-info > .selector-group,
 .product-info > .product-actions,
 .product-info > .trust-badges,
-.product-info > .qce-block {
+.product-info > .qce-infotri {
   grid-column: 1 / -1;
 }
 
@@ -432,68 +444,30 @@ ul {
 /* =====================
    TABS
    ===================== */
-.tabs-nav-wrapper {
-  border-bottom: 1px solid var(--gray-light);
-  background: var(--white);
-  position: sticky;
-  top: 64px;
-  z-index: 90;
-}
-.tabs-nav {
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.tabs-nav::-webkit-scrollbar { display: none; }
-
-.tab-btn {
-  padding: 16px 24px;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--gray-mid);
-  border-bottom: 2px solid transparent;
-  white-space: nowrap;
-  transition: color var(--transition), border-color var(--transition);
-  flex-shrink: 0;
-}
-.tab-btn:hover {
-  color: var(--black);
-}
-.tab-btn.active {
-  color: var(--black);
-  border-bottom-color: var(--black);
-  font-weight: 500;
-}
-/* Visual highlight for the env tab */
-.tab-btn.active-env {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  font-weight: 500;
-}
-
-/* TAB PANELS */
-.tab-contents {
+/* PRODUCT DETAILS (sections sans onglets) */
+.product-details {
   padding-top: 56px;
   padding-bottom: 80px;
-}
-.tab-panel {
-  display: none;
-}
-.tab-panel.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
 }
 
-.tab-inner {
+.details-section {
   max-width: 860px;
 }
-.tab-inner h2 {
+.details-section h2 {
   font-family: var(--font-display);
   font-size: 26px;
   font-weight: 400;
   margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-light);
 }
-.tab-inner p {
+.details-section h2 + h2 {
+  margin-top: 40px;
+}
+.details-section p {
   color: var(--gray-dark);
   margin-bottom: 14px;
   line-height: 1.75;
@@ -530,6 +504,25 @@ ul {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 12px;
+}
+
+/* Section compacte 3 colonnes */
+.details-section--compact h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.compact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.compact-col h3 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-mid);
+  margin-bottom: 10px;
 }
 
 /* =====================
@@ -610,31 +603,61 @@ ul {
   color: var(--gray-dark);
 }
 
-.qce-infotri {
-  background: var(--gray-bg);
-  border-radius: var(--radius);
-  padding: 14px;           /* padding égal sur les 4 côtés */
+/* ENVIRONNEMENT — lignes */
+.env-row {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 540px;            /* largeur fixe, plus étroite que la colonne (~616px) */
-  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--gray-light);
 }
-
-.infotri-label {
-  font-size: 13px;
+.env-row:first-of-type {
+  border-top: none;
+}
+.env-row__text {
+  flex: 1;
+}
+.env-row__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+.env-row__desc {
+  font-size: 13.5px;
   color: var(--gray-mid);
-  font-weight: 500;
+  line-height: 1.65;
   margin: 0;
 }
+.env-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.env-link:hover {
+  color: var(--black);
+}
+.ecobalyse-label {
+  flex-shrink: 0;
+  width: 150px;
+  height: auto;
+}
 
-/* Le wrapper s'étend à (100% / scale) avant scale,
-   ce qui donne exactement la largeur du contenu après scale.
-   margin-bottom négatif pour compenser l'espace de layout non-scalé. */
+.qce-infotri {
+  display: none; /* remplacé par .env-row */
+}
+
+/* Widget Info-Tri : clip container fixe la largeur visible */
+.infotri-clip {
+  flex-shrink: 0;
+  width: 378px;   /* 540px × 0.7 */
+  overflow: hidden;
+}
 .infotri-widget-wrap {
   transform: scale(0.7);
   transform-origin: top left;
-  width: calc(100% / 0.7);
+  width: calc(378px / 0.7); /* 540px — largeur native du widget */
   margin-bottom: -42px;
 }
 
@@ -938,12 +961,26 @@ ul {
   }
 }
 
+@media (max-width: 700px) {
+  .env-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .ecobalyse-label {
+    width: 130px;
+  }
+  .infotri-clip {
+    width: 100%;
+    max-width: 378px;
+  }
+}
+
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .product-title { font-size: 26px; }
   .composition-grid { grid-template-columns: 1fr; gap: 24px; }
-  .tabs-nav { gap: 0; }
-  .tab-btn { padding: 14px 16px; font-size: 13px; }
-  .qce-infotri { padding: 12px; }
+  .qce-infotri { padding: 16px 20px; }
   .footer-links { flex-direction: column; gap: 24px; }
+  .compact-grid { grid-template-columns: 1fr; gap: 16px; }
 }
