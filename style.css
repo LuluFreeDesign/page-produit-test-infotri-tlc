@@ -606,7 +606,7 @@ ul {
 /* ENVIRONNEMENT — lignes */
 .env-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
   padding: 24px 0;
@@ -648,17 +648,18 @@ ul {
   display: none; /* remplacé par .env-row */
 }
 
-/* Widget Info-Tri : clip container fixe la largeur visible */
+/* Widget Info-Tri : clip container fixe largeur ET hauteur pour éviter
+   le layout shift dû à la hauteur initiale de l'iframe avant chargement */
 .infotri-clip {
   flex-shrink: 0;
   width: 378px;   /* 540px × 0.7 */
+  height: 85px;   /* 110px × 0.7 + marge, bloque la hauteur dès le départ */
   overflow: hidden;
 }
 .infotri-widget-wrap {
   transform: scale(0.7);
   transform-origin: top left;
   width: calc(378px / 0.7); /* 540px — largeur native du widget */
-  margin-bottom: -42px;
 }
 
 .qce-link {
